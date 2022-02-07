@@ -2,7 +2,7 @@
 
 ## Live site:
 
-https://three-react.netlify.app/
+https://flying-spheres.netlify.app/
 
 ## Description:
 
