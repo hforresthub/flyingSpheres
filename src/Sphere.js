@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import useKeypress from 'react-use-keypress'
 import { useFrame } from '@react-three/fiber'
 import realtime from './firebase'
-import { ref, set, update } from 'firebase/database'
+import { ref, update } from 'firebase/database'
 // import { useEffect } from 'react'
 
 function Sphere(props) {
