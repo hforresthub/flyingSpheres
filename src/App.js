@@ -5,7 +5,7 @@ import Camera from './Camera'
 import { Canvas } from '@react-three/fiber'
 import { useEffect, useState } from 'react';
 import realtime from './firebase'
-import { ref, onValue, set, update } from 'firebase/database'
+import { ref, onValue, update } from 'firebase/database'
 
 function App() {
 
