@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber'
 import { useEffect, useState } from 'react';
 import realtime from './firebase'
 import { ref, onValue, update } from 'firebase/database'
+import { Say, SayButton } from 'react-say'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
+
 		// add user if they dont exist in firebase yet
 		const checkForName = sphereArray.filter((element) => {
 			return (element.userName === currentUserName)
@@ -151,6 +153,7 @@ function App() {
 		<div className="App">
 			<div className="wrapper">
 				<h1>Flying Stuff</h1>
+				<SayButton speak="Testing" >Testing</SayButton>
 				<p>Enter your name and hit enter to add a sphere of the chosen color, wasd keys to move, space and c to rise or fall</p>
 				<form onSubmit={handleSubmit}>
 					<label htmlFor="userName">User: </label>
