@@ -237,7 +237,6 @@ function Sphere(props) {
 				if (currentSphere.current.position.z < -1 * boundSize) {
 					currentSphere.current.position.z = boundSize
 				}
-
 			}}
 			onPointerOver={(event) => setHover(true)}
 			onPointerOut={(event) => setHover(false)}>

@@ -19,6 +19,8 @@ function App() {
 	const [boxArray, setBoxArray] = useState([])
 	const [sphereArray, setSphereArray] = useState([])
 
+	const [currentMessage, setCurrentMessage] = useState('test')
+
 	const handleSubmit = (event) => {
 		event.preventDefault()
 
@@ -153,7 +155,10 @@ function App() {
 		<div className="App">
 			<div className="wrapper">
 				<h1>Flying Stuff</h1>
-				<SayButton speak="Testing" >Testing</SayButton>
+				{currentMessage !== '' ? () => <Say text='hi' />
+				: null}
+				{() => {return (<Say text='hello' />)}}
+				<SayButton text="Testing" >Testing</SayButton>
 				<p>Enter your name and hit enter to add a sphere of the chosen color, wasd keys to move, space and c to rise or fall</p>
 				<form onSubmit={handleSubmit}>
 					<label htmlFor="userName">User: </label>
