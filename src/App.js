@@ -92,6 +92,7 @@ function App() {
 
 	const handleUserNameChange = (event) => {
 		setCurrentUserName(event.target.value)
+		setCurrentMessage(event.target.value)
 	}
 
 	const handleColorChange = (event) => {
@@ -155,11 +156,13 @@ function App() {
 		<div className="App">
 			<div className="wrapper">
 				<h1>Flying Stuff</h1>
-				{currentMessage !== '' ? () => <Say text='hi' />
-				: null}
-				{() => {return (<Say text='hello' />)}}
-				<SayButton text="Testing" >Testing</SayButton>
-				<p>Enter your name and hit enter to add a sphere of the chosen color, wasd keys to move, space and c to rise or fall</p>
+				{currentMessage !== '' ? () => <Say text={currentMessage} />
+					: null}
+				{() => { return (<Say text='hello' />) }}
+				<div className="buttonWrapper">
+					<SayButton text="Testing" >Testing</SayButton>
+					<p>Enter your name and hit enter to add a sphere of the chosen color, wasd keys to move, space and c to rise or fall</p>
+				</div>
 				<form onSubmit={handleSubmit}>
 					<label htmlFor="userName">User: </label>
 					<input type="text" name="userName" id="userName" value={currentUserName} onChange={handleUserNameChange} />
