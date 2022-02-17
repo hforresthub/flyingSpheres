@@ -4,9 +4,12 @@ Canvas, body, .App, html {
 }
 .App {
 	display: flex;
+	background-color: #e9ffed;
+	color: #242524;
 }
 Canvas, .canvasWrapper {
 	width: 80vw;
+	background-color: #e9ffed;
 }
 .wrapper {
 	width: 20vw;
@@ -18,8 +21,12 @@ form, .info, p, h1, .buttonWrapper {
 	display: flex;
 	flex-direction: column;
 	padding: 0 2%;
-	border: 1px solid gray;
+	border: 1px solid #d4ffdb;
 	border-radius: 3px;
+	box-shadow: -1px -1px 4px #008031,
+	1px -1px 4px #008031,
+	1px 1px 4px #008031,
+	-1px -1px 4px #008031;
 	margin: 4px;
 	padding: 4px;
 }

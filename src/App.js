@@ -8,6 +8,9 @@ import realtime from './firebase'
 import { ref, onValue, update } from 'firebase/database'
 import { Say, SayButton } from 'react-say'
 
+
+    /* "start": "react-scripts --openssl-legacy-provider start", */
+
 function App() {
 
 	const [currentUserName, setCurrentUserName] = useState('')
@@ -174,6 +177,9 @@ function App() {
 					<p>Camera location:</p>
 					<p>x: {cameraPosition.x} y: {cameraPosition.y} z: {cameraPosition.z}</p>
 					<p>rotation: {cameraRotation.y}</p>
+				</div>
+				<div className="description">
+					<p>This app uses Firebase to update sphere locations of all users in realtime.</p>
 				</div>
 			</div>
 			<div className="canvasWrapper">
